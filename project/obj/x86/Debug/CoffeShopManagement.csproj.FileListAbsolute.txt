@@ -1,0 +1,28 @@
+C:\Users\user\Google Drive\HK 2 năm 2\Lập trình Ứng Dụng\DoAn\project\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\user\Google Drive\HK 2 năm 2\Lập trình Ứng Dụng\DoAn\project\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\user\Google Drive\HK 2 năm 2\Lập trình Ứng Dụng\DoAn\project\obj\x86\Debug\CoffeShopManagement.csproj.ResolveComReference.cache
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\CoffeShopManagement.csproj.ResolveComReference.cache
+C:\Users\levan\OneDrive\Documents\DoAn\project\bin\Debug\project.exe
+C:\Users\levan\OneDrive\Documents\DoAn\project\bin\Debug\project.pdb
+C:\Users\levan\OneDrive\Documents\DoAn\project\bin\Debug\Interop.WMPLib.dll
+C:\Users\levan\OneDrive\Documents\DoAn\project\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\CoffeShopManagement.csprojResolveAssemblyReference.cache
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmAdAccount.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmAddFood.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.Block.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.ChangePersional.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmAdCategory.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmAdFood.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmAdTables.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmLogin.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmMain.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.frmPay.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.PlusTable.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.Properties.Resources.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.ReFood.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.ReplaceTable.resources
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\CoffeShopManagement.csproj.GenerateResource.Cache
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.exe
+C:\Users\levan\OneDrive\Documents\DoAn\project\obj\x86\Debug\project.pdb
