@@ -52,7 +52,7 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_load_billinfo";
-            command.Parameters.AddWithValue("@NAMETABLE", SqlDbType.NVarChar).Value = nameT;
+            command.Parameters.AddWithValue("@NAME_TABLE", SqlDbType.NVarChar).Value = nameT;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(data);
             connection.Close();
@@ -90,7 +90,7 @@ namespace project
                 command.Connection = connection;
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "sp_load_food";
-                command.Parameters.AddWithValue("@NAMECATEGORY", SqlDbType.NVarChar).Value = nameC;
+                command.Parameters.AddWithValue("@NAME_CATEGORY", SqlDbType.NVarChar).Value = nameC;
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);
                 connection.Close();
@@ -119,7 +119,7 @@ namespace project
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "sp_datban";
                 command.Parameters.AddWithValue("@STT", SqlDbType.NVarChar).Value = stt;
-                command.Parameters.AddWithValue("@NAMETable", SqlDbType.NVarChar).Value = nameT;
+                command.Parameters.AddWithValue("@NAME_TABLE", SqlDbType.NVarChar).Value = nameT;
                 command.ExecuteNonQuery();
                 connection.Close();
         }
@@ -129,9 +129,9 @@ namespace project
                 SqlCommand command = new SqlCommand("sp_Add_Account",connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@USERNAME", SqlDbType.NVarChar).Value = USERNAME;
-                command.Parameters.AddWithValue("@DISPLAYNAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
+                command.Parameters.AddWithValue("@DISPLAY_NAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
                 command.Parameters.AddWithValue("@PASSWORD", SqlDbType.NVarChar).Value = PASSWORD;
-                command.Parameters.AddWithValue("@TYPEACCOUNT", SqlDbType.NVarChar).Value = TYPEACCOUNT;
+                command.Parameters.AddWithValue("@TYPE_ACCOUNT", SqlDbType.NVarChar).Value = TYPEACCOUNT;
                 command.ExecuteNonQuery();
                 connection.Close();
         }
@@ -154,9 +154,9 @@ namespace project
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_Update_Account";
             command.Parameters.AddWithValue("@USERNAME", SqlDbType.NVarChar).Value = USERNAME;
-            command.Parameters.AddWithValue("@DISPLAYNAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
+            command.Parameters.AddWithValue("@DISPLAY_NAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
             command.Parameters.AddWithValue("@PASSWORD", SqlDbType.NVarChar).Value = PASSWORD;
-            command.Parameters.AddWithValue("@TYPEACCOUNT", SqlDbType.NVarChar).Value = TYPEACCOUNT;
+            command.Parameters.AddWithValue("@TYPE_ACCOUNT", SqlDbType.NVarChar).Value = TYPEACCOUNT;
             command.Parameters.AddWithValue("@Where_USERNAME", SqlDbType.NVarChar).Value = Where;
             command.ExecuteNonQuery();
             connection.Close();
@@ -167,7 +167,7 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_add_food";
-            command.Parameters.AddWithValue("@NAMECATEGORY", SqlDbType.NVarChar).Value = NAMECATEGORY;
+            command.Parameters.AddWithValue("@NAME_CATEGORY", SqlDbType.NVarChar).Value = NAMECATEGORY;
             command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = NAME;
             command.Parameters.AddWithValue("@PRICE", SqlDbType.Float).Value = PRICE;
             command.ExecuteNonQuery();
@@ -179,7 +179,7 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_del_food";
-            command.Parameters.AddWithValue("@NAMECATEGORY", SqlDbType.NVarChar).Value = NAMECATEGORY;
+            command.Parameters.AddWithValue("@NAME_CATEGORY", SqlDbType.NVarChar).Value = NAMECATEGORY;
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -189,10 +189,10 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_update_food";
-            command.Parameters.AddWithValue("@NAMECATEGORY", SqlDbType.NVarChar).Value = NAMECATEGORY;
+            command.Parameters.AddWithValue("@NAME_CATEGORY", SqlDbType.NVarChar).Value = NAMECATEGORY;
             command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = NAME;
             command.Parameters.AddWithValue("@PRICE", SqlDbType.Float).Value = PRICE;
-            command.Parameters.AddWithValue("@Where_name", SqlDbType.NVarChar).Value = where;
+            command.Parameters.AddWithValue("@Where_NAME", SqlDbType.NVarChar).Value = where;
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -315,7 +315,7 @@ namespace project
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_Update_category";
             command.Parameters.AddWithValue("@NAMEC", SqlDbType.NVarChar).Value = NAMEC;
-            command.Parameters.AddWithValue("@Where_cate", SqlDbType.NVarChar).Value = Where;
+            command.Parameters.AddWithValue("@Where_CATEGORY", SqlDbType.NVarChar).Value = Where;
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -340,8 +340,8 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_gop_Table";
-            command.Parameters.AddWithValue("@NAMETABLEA", SqlDbType.NVarChar).Value = NAMETABLEA;
-            command.Parameters.AddWithValue("@NAMETABLEB", SqlDbType.NVarChar).Value = NAMETABLEB;
+            command.Parameters.AddWithValue("@NAME_TABLE_A", SqlDbType.NVarChar).Value = NAMETABLEA;
+            command.Parameters.AddWithValue("@NAME_TABLE_B", SqlDbType.NVarChar).Value = NAMETABLEB;
             command.Parameters.AddWithValue("@addTotal", SqlDbType.NVarChar).Value = addTotal;
             command.ExecuteNonQuery();
             connection.Close();
@@ -412,8 +412,8 @@ namespace project
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_them_mon";
             command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = NAME;
-            command.Parameters.AddWithValue("@NAMEFood", SqlDbType.NVarChar).Value = NAMEFood;
-            command.Parameters.AddWithValue("@count", SqlDbType.Int).Value = count;
+            command.Parameters.AddWithValue("@NAME_FOOD", SqlDbType.NVarChar).Value = NAMEFood;
+            command.Parameters.AddWithValue("@COUNT", SqlDbType.Int).Value = count;
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -424,8 +424,8 @@ namespace project
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_tang_slmon";
             command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = NAME;
-            command.Parameters.AddWithValue("@NAMEFood", SqlDbType.NVarChar).Value = NAMEFood;
-            command.Parameters.AddWithValue("@count", SqlDbType.Int).Value = count;
+            command.Parameters.AddWithValue("@NAME_FOOD", SqlDbType.NVarChar).Value = NAMEFood;
+            command.Parameters.AddWithValue("@COUNT", SqlDbType.Int).Value = count;
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -437,7 +437,7 @@ namespace project
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_check_food_table";
             command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = NAME;
-            command.Parameters.AddWithValue("@NAMEFood", SqlDbType.NVarChar).Value = NAMEFood;
+            command.Parameters.AddWithValue("@NAME_FOOD", SqlDbType.NVarChar).Value = NAMEFood;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(data);
             connection.Close();
@@ -450,7 +450,7 @@ namespace project
             command.Connection = connection;
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "sp_get_price";
-            command.Parameters.AddWithValue("@NAMEFood", SqlDbType.NVarChar).Value = NAMEFood;
+            command.Parameters.AddWithValue("@NAME_FOOD", SqlDbType.NVarChar).Value = NAMEFood;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(data);
             connection.Close();
@@ -478,7 +478,7 @@ namespace project
             command.CommandText = "sp_reset_account";
             command.Parameters.AddWithValue("@NAME", SqlDbType.NVarChar).Value = USER;
             command.Parameters.AddWithValue("@PASS", SqlDbType.NVarChar).Value = PASS;
-            command.Parameters.AddWithValue("@DISPLAYNAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
+            command.Parameters.AddWithValue("@DISPLAY_NAME", SqlDbType.NVarChar).Value = DISPLAYNAME;
             command.ExecuteNonQuery();
             connection.Close();
         }

@@ -38,7 +38,7 @@ namespace project
                 {
                     name = table.Rows[i][1].ToString();
                     type = table.Rows[i][3].ToString();
-                    MessageBox.Show("Xin chào "+name+" :)", "Đăng nhập thành công",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xin chào "+name, "Đăng nhập thành công",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
             }

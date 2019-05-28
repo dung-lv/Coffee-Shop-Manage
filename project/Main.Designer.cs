@@ -75,6 +75,7 @@
             this.lbMedia = new System.Windows.Forms.ListBox();
             this.btnAddMedia = new System.Windows.Forms.Button();
             this.btnMediaList = new System.Windows.Forms.Button();
+            this.wmpMedia = new AxWMPLib.AxWindowsMediaPlayer();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnBlock = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -109,13 +110,13 @@
             this.tsmMoBan = new System.Windows.Forms.ToolStripMenuItem();
             this.ofdMedia = new System.Windows.Forms.OpenFileDialog();
             this.aCCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wmpMedia = new AxWMPLib.AxWindowsMediaPlayer();
             this.menuStrip1.SuspendLayout();
             this.gpbTable.SuspendLayout();
             this.gpbBill.SuspendLayout();
             this.gpbCategory.SuspendLayout();
             this.gpbFood.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wmpMedia)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,7 +124,6 @@
             this.cmnSubTable2.SuspendLayout();
             this.cmnSubTable3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wmpMedia)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -158,7 +158,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(287, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(293, 6);
             // 
             // tmiViews
             // 
@@ -167,7 +167,7 @@
             this.toolStripSeparator5,
             this.tmiHistory});
             this.tmiViews.Name = "tmiViews";
-            this.tmiViews.Size = new System.Drawing.Size(290, 24);
+            this.tmiViews.Size = new System.Drawing.Size(296, 26);
             this.tmiViews.Text = "Xem lịch sử";
             // 
             // tmiPersonalInfor
@@ -175,61 +175,61 @@
             this.tmiPersonalInfor.Name = "tmiPersonalInfor";
             this.tmiPersonalInfor.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.I)));
-            this.tmiPersonalInfor.Size = new System.Drawing.Size(301, 24);
+            this.tmiPersonalInfor.Size = new System.Drawing.Size(307, 26);
             this.tmiPersonalInfor.Text = "Personal information";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(298, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(304, 6);
             // 
             // tmiHistory
             // 
             this.tmiHistory.Name = "tmiHistory";
             this.tmiHistory.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.H)));
-            this.tmiHistory.Size = new System.Drawing.Size(301, 24);
+            this.tmiHistory.Size = new System.Drawing.Size(307, 26);
             this.tmiHistory.Text = "Access history";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(287, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(293, 6);
             // 
             // tmiChange
             // 
             this.tmiChange.Name = "tmiChange";
             this.tmiChange.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.tmiChange.Size = new System.Drawing.Size(290, 24);
+            this.tmiChange.Size = new System.Drawing.Size(296, 26);
             this.tmiChange.Text = "Thay đổi thông tin";
             this.tmiChange.Click += new System.EventHandler(this.tmiChange_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(287, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(293, 6);
             // 
             // tmiSleep
             // 
             this.tmiSleep.Name = "tmiSleep";
             this.tmiSleep.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.tmiSleep.Size = new System.Drawing.Size(290, 24);
+            this.tmiSleep.Size = new System.Drawing.Size(296, 26);
             this.tmiSleep.Text = "Đi ngủ";
             this.tmiSleep.Click += new System.EventHandler(this.btnBlock_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(287, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(293, 6);
             // 
             // tmiLogout
             // 
             this.tmiLogout.Name = "tmiLogout";
             this.tmiLogout.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.L)));
-            this.tmiLogout.Size = new System.Drawing.Size(290, 24);
+            this.tmiLogout.Size = new System.Drawing.Size(296, 26);
             this.tmiLogout.Text = "Đăng xuất";
             this.tmiLogout.Click += new System.EventHandler(this.tmiLogout_Click);
             // 
@@ -252,46 +252,46 @@
             // 
             this.tmiCategory.Name = "tmiCategory";
             this.tmiCategory.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.tmiCategory.Size = new System.Drawing.Size(263, 24);
+            this.tmiCategory.Size = new System.Drawing.Size(269, 26);
             this.tmiCategory.Text = "Danh mục";
             this.tmiCategory.Click += new System.EventHandler(this.tmiCategory_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(260, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(266, 6);
             // 
             // tmiFood
             // 
             this.tmiFood.Name = "tmiFood";
             this.tmiFood.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.tmiFood.Size = new System.Drawing.Size(263, 24);
+            this.tmiFood.Size = new System.Drawing.Size(269, 26);
             this.tmiFood.Text = "Danh sách món";
             this.tmiFood.Click += new System.EventHandler(this.tmiFood_Click);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(260, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(266, 6);
             // 
             // tmiTable
             // 
             this.tmiTable.Name = "tmiTable";
             this.tmiTable.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.tmiTable.Size = new System.Drawing.Size(263, 24);
+            this.tmiTable.Size = new System.Drawing.Size(269, 26);
             this.tmiTable.Text = "Danh sách bàn";
             this.tmiTable.Click += new System.EventHandler(this.tmiTable_Click);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(260, 6);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(266, 6);
             // 
             // tmiAccount
             // 
             this.tmiAccount.Name = "tmiAccount";
             this.tmiAccount.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.tmiAccount.Size = new System.Drawing.Size(263, 24);
+            this.tmiAccount.Size = new System.Drawing.Size(269, 26);
             this.tmiAccount.Text = "Danh sách tài khoản";
             this.tmiAccount.Click += new System.EventHandler(this.tmiAccount_Click);
             // 
@@ -399,10 +399,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Maiandra GD", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(34, 60);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(297, 22);
+            this.label5.Size = new System.Drawing.Size(285, 24);
             this.label5.TabIndex = 10;
             this.label5.Text = "STT             Món            Số lượng";
             // 
@@ -585,6 +585,18 @@
             this.btnMediaList.UseVisualStyleBackColor = true;
             this.btnMediaList.Click += new System.EventHandler(this.btnMedia_Click);
             // 
+            // wmpMedia
+            // 
+            this.wmpMedia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.wmpMedia.Enabled = true;
+            this.wmpMedia.Location = new System.Drawing.Point(376, 24);
+            this.wmpMedia.Name = "wmpMedia";
+            this.wmpMedia.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpMedia.OcxState")));
+            this.wmpMedia.Size = new System.Drawing.Size(368, 165);
+            this.wmpMedia.TabIndex = 46;
+            // 
             // btnPay
             // 
             this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -621,7 +633,7 @@
             // 
             this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblName.Font = new System.Drawing.Font("BankGothic Lt BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
             this.lblName.Location = new System.Drawing.Point(245, 106);
             this.lblName.Name = "lblName";
@@ -649,7 +661,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.Font = new System.Drawing.Font("BankGothic Lt BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(136, 108);
             this.label11.Name = "label11";
@@ -679,7 +691,7 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.Font = new System.Drawing.Font("BankGothic Lt BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(13, 111);
             this.label10.Name = "label10";
@@ -692,7 +704,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.Font = new System.Drawing.Font("BankGothic Lt BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(242, 25);
             this.label9.Name = "label9";
@@ -720,7 +732,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.Font = new System.Drawing.Font("BankGothic Lt BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(129, 25);
             this.label8.Name = "label8";
@@ -733,7 +745,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.Font = new System.Drawing.Font("BankGothic Lt BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(15, 25);
             this.label7.Name = "label7";
@@ -786,7 +798,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 157);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 156);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 23);
             this.pictureBox2.TabIndex = 17;
@@ -797,7 +809,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 126);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 111);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 16;
@@ -807,12 +819,12 @@
             // 
             this.txtNameMan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNameMan.Font = new System.Drawing.Font("Monospac821 BT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameMan.Location = new System.Drawing.Point(7, 31);
             this.txtNameMan.Name = "txtNameMan";
             this.txtNameMan.Size = new System.Drawing.Size(349, 64);
             this.txtNameMan.TabIndex = 15;
-            this.txtNameMan.Text = "QUÁN CAFE BẤT ỔN";
+            this.txtNameMan.Text = "QUÁN CAFE DH";
             this.txtNameMan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAdress
@@ -820,23 +832,23 @@
             this.txtAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdress.Font = new System.Drawing.Font("Magneto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdress.Location = new System.Drawing.Point(38, 106);
+            this.txtAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdress.Location = new System.Drawing.Point(43, 106);
             this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(311, 49);
+            this.txtAdress.Size = new System.Drawing.Size(311, 25);
             this.txtAdress.TabIndex = 14;
-            this.txtAdress.Text = "Địa chỉ: số 9 đường Nguyễn Huệ, Quận 1, TP HCM";
+            this.txtAdress.Text = "Địa chỉ: số 1, Trần Cung, Hà Nội";
             this.txtAdress.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // datetime
             // 
             this.datetime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.datetime.Enabled = false;
-            this.datetime.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.datetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.datetime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datetime.Location = new System.Drawing.Point(42, 157);
             this.datetime.Name = "datetime";
-            this.datetime.Size = new System.Drawing.Size(122, 23);
+            this.datetime.Size = new System.Drawing.Size(122, 22);
             this.datetime.TabIndex = 13;
             // 
             // cmnSubTable
@@ -850,7 +862,7 @@
             this.tsmGopBan,
             this.tsmInTT});
             this.cmnSubTable.Name = "cmnSubTable";
-            this.cmnSubTable.Size = new System.Drawing.Size(180, 170);
+            this.cmnSubTable.Size = new System.Drawing.Size(180, 148);
             this.cmnSubTable.Text = "ONLINE";
             this.cmnSubTable.Opening += new System.ComponentModel.CancelEventHandler(this.cmnSubTable_Opening);
             // 
@@ -953,18 +965,6 @@
             this.ofdMedia.Filter = "Mp3|*.mp3|Wav|*.wav|Mp4|*.mp4|3gp|*.3gp";
             this.ofdMedia.Multiselect = true;
             // 
-            // wmpMedia
-            // 
-            this.wmpMedia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.wmpMedia.Enabled = true;
-            this.wmpMedia.Location = new System.Drawing.Point(376, 24);
-            this.wmpMedia.Name = "wmpMedia";
-            this.wmpMedia.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpMedia.OcxState")));
-            this.wmpMedia.Size = new System.Drawing.Size(368, 165);
-            this.wmpMedia.TabIndex = 46;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -997,6 +997,7 @@
             this.gpbFood.ResumeLayout(false);
             this.gpbFood.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wmpMedia)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1004,7 +1005,6 @@
             this.cmnSubTable2.ResumeLayout(false);
             this.cmnSubTable3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wmpMedia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
